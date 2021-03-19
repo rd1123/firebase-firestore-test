@@ -1,7 +1,8 @@
 const { createStudents } = require("./src/createStudents");
 const { updateStudents } = require("./src/updateStudents");
 const { getStudents } = require('./src/getStudents');
-const { deleteStudents } = require("./src/deleteStudents")
+const { deleteStudents } = require("./src/deleteStudents");
+
 const { credential } = require('firebase-admin');
 const admin = require('firebase-admin');
 const serviceAccount = require('./serviceAccountKey.json');
@@ -11,11 +12,16 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 const FieldValue = admin.firestore.FieldValue;
+
+// ==> authentication
+
+
+
 // => set
 // createStudents(db);
 
 // => update
-updateStudents(db, FieldValue);
+// updateStudents(db, FieldValue);
 
 // => get
 // getStudents(db)
